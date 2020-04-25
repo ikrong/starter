@@ -7,6 +7,7 @@
   "author": "ikrong <lun.i@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "sass":"sass ./src/style.scss:./src/style.css --watch"
+    "sass": "sass ./src/style.scss:./src/style.css --watch",
+    "gh-pages": "git subtree push --prefix src origin gh-pages"
   }
 }

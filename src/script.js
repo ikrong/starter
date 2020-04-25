@@ -1,14 +1,7 @@
-!(() => {
-    let projects = [{
-        name: "webpack-starter",
-        type: "github",
-        url: "https://github.com/wbkd/webpack-starter",
-        lang: {
-            zh: "使用最新的Webpack构建你的前端项目！",
-            en: "A lightweight foundation for your next webpack based frontend project."
-        },
-        tags: ['webpack', 'javascript']
-    }]
+!(async () => {
+    let projects = []
+
+    projects = await (await fetch('./projects.json')).json()
 
     function buildList() {
         let html = projects.reduce((html, item) => {
