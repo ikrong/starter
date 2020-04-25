@@ -1,0 +1,12 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Project starter.",
+  "main": "index.js",
+  "repository": "git@github.com:ikrong/starter.git",
+  "author": "ikrong <lun.i@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass":"sass ./src/style.scss:./src/style.css --watch"
+  }
+}

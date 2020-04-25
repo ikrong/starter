@@ -1,0 +1,60 @@
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>初始项目编辑</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sofish/Typo.css/typo.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="typo">
+    <div class="container"></div>
+    <div class="bottom-actions">
+        <span class="download">导出项目配置</span>
+        <span class="addnew">添加</span>
+    </div>
+
+    <div class="edit-modal hide">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="name">
+                <input type="text" id="projectname" name="projectname" placeholder="项目名称">
+            </div>
+            <div class="type">
+                <div>
+                    <span>项目类型</span>
+                    <select id="projecttype">
+                        <option value="">默认</option>
+                        <option value="github">github</option>
+                    </select>
+                </div>
+                <div class="github-address">
+                    <input type="text" id="githubaddress" placeholder="GITHUB下载地址">
+                </div>
+            </div>
+            <div class="lang">
+                <div class="tag">中文描述</div>
+                <div>
+                    <textarea id="zh-lang"></textarea>
+                </div>
+            </div>
+            <div class="lang">
+                <div class="tag">英文描述</div>
+                <div>
+                    <textarea id="en-lang"></textarea>
+                </div>
+            </div>
+            <div class="tags">
+                <input type="text" id="taglist" placeholder="标签，空格隔开">
+            </div>
+            <div class="action">
+                <span class="cancel btn">取消</span>
+                <span class="save btn">保存</span>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

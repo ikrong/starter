@@ -1,0 +1,196 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dfe4ea;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 90%;
+  background-color: #fff;
+  min-height: 100%;
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.2), 5px 0 5px rgba(0, 0, 0, 0.2);
+  user-select: none;
+  padding-bottom: 40px;
+}
+.container .project {
+  counter-increment: project;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dfe4ea;
+}
+.container .head .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.container .head .name::before {
+  content: counter(project) ": ";
+}
+.container .head .type {
+  text-transform: uppercase;
+}
+.container .head .edit:active {
+  background-color: #dfe4ea;
+}
+.container .lang {
+  padding: 16px 0;
+}
+
+.bottom-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  width: 800px;
+  padding: 0;
+  max-width: 90%;
+  height: 40px;
+  user-select: none;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-top: 1px solid #dfe4ea;
+  display: flex;
+}
+.bottom-actions span {
+  width: 50%;
+}
+.bottom-actions span:active {
+  background-color: #dfe4ea;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background-color: #2ed573;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.tag.blue {
+  background-color: #1e90ff;
+}
+.tag.red {
+  background-color: #ff6348;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.edit-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.edit-modal .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.edit-modal .content {
+  position: absolute;
+  width: 800px;
+  max-width: 90%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 50px 20px;
+  overflow: auto;
+}
+.edit-modal .content input,
+.edit-modal .content select,
+.edit-modal .content textarea {
+  border: none;
+}
+.edit-modal .content input:focus, .edit-modal .content input:active,
+.edit-modal .content select:focus,
+.edit-modal .content select:active,
+.edit-modal .content textarea:focus,
+.edit-modal .content textarea:active {
+  outline: none;
+}
+.edit-modal .content .name input {
+  border-bottom: 1px solid #dfe4ea;
+  padding: 2px 5px;
+  width: 100%;
+}
+.edit-modal .content .type {
+  padding: 16px 5px;
+}
+.edit-modal .content .type select {
+  text-transform: uppercase;
+}
+.edit-modal .content .type .github-address input {
+  border-bottom: 1px solid #dfe4ea;
+  padding: 2px;
+  width: 100%;
+  margin: 5px 0;
+}
+.edit-modal .content .lang {
+  padding: 0 5px;
+}
+.edit-modal .content .lang textarea {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  border: 1px solid #dfe4ea;
+  padding: 5px;
+}
+.edit-modal .content .action {
+  text-align: center;
+}
+.edit-modal .content .action .btn {
+  padding: 5px 20px;
+  margin: 0 20px;
+  border-radius: 4px;
+  background-color: #dfe4ea;
+  color: #000;
+  cursor: pointer;
+}
+.edit-modal .content .action .btn:active {
+  background-color: #ccd0d4;
+}
+.edit-modal .content .action .btn.save {
+  background-color: #1e90ff;
+  color: #fff;
+}
+.edit-modal .content .action .btn.save:active {
+  background-color: #0f73d6;
+}
+.edit-modal .content .tags input {
+  border-bottom: 1px solid #dfe4ea;
+  padding: 2px 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
