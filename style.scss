@@ -1,0 +1,228 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dfe4ea;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 90%;
+    background-color: #fff;
+    min-height: 100%;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, .2), 5px 0 5px rgba(0, 0, 0, .2);
+    user-select: none;
+    padding-bottom: 40px;
+
+    .project {
+        counter-increment: project;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #dfe4ea;
+    }
+
+    .head {
+        .name {
+            &::before {
+                content: counter(project) ": ";
+            }
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .type {
+            text-transform: uppercase;
+        }
+
+        .edit {
+            &:active {
+                background-color: #dfe4ea;
+            }
+        }
+    }
+
+    .lang {
+        padding: 16px 0;
+    }
+}
+
+.bottom-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    width: 800px;
+    padding: 0;
+    max-width: 90%;
+    height: 40px;
+    user-select: none;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-top: 1px solid #dfe4ea;
+    display: flex;
+
+    span {
+        width: 50%;
+
+        &:active {
+            background-color: #dfe4ea;
+        }
+    }
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background-color: #2ed573;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-right: 5px;
+
+    &.blue {
+        background-color: #1e90ff;
+    }
+
+    &.red {
+        background-color: #ff6348;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.edit-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    .content {
+        position: absolute;
+        width: 800px;
+        max-width: 90%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 50px 20px;
+        overflow: auto;
+
+        input,
+        select,
+        textarea {
+            border: none;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+
+        .name {
+            input {
+                border-bottom: 1px solid #dfe4ea;
+                padding: 2px 5px;
+                width: 100%;
+            }
+        }
+
+        .type {
+            padding: 16px 5px;
+
+            select {
+                text-transform: uppercase;
+            }
+
+            .github-address {
+                input {
+                    border-bottom: 1px solid #dfe4ea;
+                    padding: 2px;
+                    width: 100%;
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        .lang {
+            padding: 0 5px;
+
+            textarea {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: block;
+                width: 100%;
+                height: 100px;
+                resize: none;
+                border: 1px solid #dfe4ea;
+                padding: 5px;
+            }
+        }
+
+        .action {
+            text-align: center;
+
+            .btn {
+                padding: 5px 20px;
+                margin: 0 20px;
+                border-radius: 4px;
+                background-color: #dfe4ea;
+                color: #000;
+                cursor: pointer;
+
+                &:active {
+                    background-color: #ccd0d4;
+                }
+
+                &.save {
+                    background-color: #1e90ff;
+                    color: #fff;
+
+                    &:active {
+                        background-color: #0f73d6;
+                    }
+                }
+
+            }
+        }
+
+        .tags {
+            input {
+                border-bottom: 1px solid #dfe4ea;
+                padding: 2px 5px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
