@@ -2,7 +2,7 @@
     {
         "name": "webpack-starter",
         "type": "github",
-        "url": "https://github.com/wbkd/webpack-starter/archive/master.zip",
+        "url": "https://github.com/wbkd/webpack-starter",
         "lang": {
             "zh": "使用最新的Webpack构建你的前端项目！",
             "en": "A lightweight foundation for your next webpack based frontend project."
@@ -10,6 +10,20 @@
         "tags": [
             "webpack",
             "javascript"
+        ]
+    },
+    {
+        "name": "rollup-ts-lib",
+        "type": "",
+        "url": "",
+        "lang": {
+            "zh": "使用rollup和typescript创建js库，并打包成一个文件！",
+            "en": "Use rollup and typescript to create JS library and package it into a file!"
+        },
+        "tags": [
+            "rollup",
+            "typescript",
+            "lib"
         ]
     }
 ]
