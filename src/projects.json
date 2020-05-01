@@ -2,7 +2,7 @@
     {
         "name": "webpack-starter",
         "type": "github",
-        "url": "https://github.com/wbkd/webpack-starter",
+        "url": "https://github.com/wbkd/webpack-starter/archive/master.zip",
         "lang": {
             "zh": "使用最新的Webpack构建你的前端项目！",
             "en": "A lightweight foundation for your next webpack based frontend project."
