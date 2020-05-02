@@ -14,7 +14,7 @@ export default {
     ],
     plugins: [
         typescript({
-            useTsconfigDeclarationDir: true,
+            useTsconfigDeclarationDir: false,
             tsconfigDefaults: require('./tsconfig.json'),
             tsconfigOverride: {
                 compilerOptions: {
